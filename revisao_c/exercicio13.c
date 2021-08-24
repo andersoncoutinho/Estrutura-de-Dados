@@ -5,11 +5,11 @@
 
 int main(void) {
     
-    int n = 11;
-    char *string = "Hello World";
-    int letras[QTD_LETRAS];
+    int n = 10;
+    char *string = "HelloWorld";
+    int letras[QTD_LETRAS] = {0};
 
-    int i;
+    int i;/*
     for(i = 0; i < QTD_LETRAS; i++) {
         letras[i] = 0;
         int j;
@@ -18,6 +18,10 @@ int main(void) {
                 letras[i]++;
             }
         }
+    }*/
+
+    for(i = 0; i < n; i++) {
+        letras[tolower(string[i]) - 'a']++;
     }
 
     for(i = 0; i < QTD_LETRAS; i++) {

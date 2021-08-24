@@ -4,6 +4,10 @@
 int* gerarVetorInvertido(int *vetor, int n) {
 
     int *novoVetor = malloc((sizeof (int)) * n);
+    if(novoVetor == NULL) {
+        puts("Memória Insuficiente");
+        exit(1);
+    }
     int i;
     for(i = 0; i < n; i++) {
         novoVetor[n-(i+1)] = vetor[i];

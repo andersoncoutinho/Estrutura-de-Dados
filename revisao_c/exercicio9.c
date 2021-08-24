@@ -9,8 +9,16 @@ int main(void) {
     
     int **matriz;
     matriz = malloc((sizeof (int*)) * m);
+    if(matriz == NULL) {
+        puts("Memória Insuficiente");
+        exit(1);
+    }
     for(i = 0; i < m; i++) {
         matriz[i] = malloc((sizeof (int)) * n);
+        if(matriz[i] == NULL) {
+            puts("Memória Insuficiente");
+            exit(1);
+        }
     }
     for(i = 0; i < m; i++) {
         for(j = 0; j < n; j++) {

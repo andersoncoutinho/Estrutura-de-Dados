@@ -9,6 +9,10 @@ int main(void) {
 
     int *vetor;
     vetor = malloc(sizeof(int) * n);
+    if(vetor == NULL) {
+        puts("Memória Insuficiente");
+        exit(1);
+    }
 
     for(i = 0; i < n; i++) {
         printf("Informe o valor do indice %d: ", i);
